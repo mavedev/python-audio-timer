@@ -9,11 +9,14 @@ from .invariants import Constants
 
 
 class ScheduleActor(metaclass=Singleton):
+    """Main class that runs timer."""
+
     def __init__(self, *, duration: int) -> None:
         self._duration = duration
         self._scheduler = sched.scheduler(time.time, time.sleep)
 
     def run_task(self, task: Callable, *args: tuple, **kwargs: dict) -> None:
+        """Run provided scheduled operation."""
         task(*args, **kwargs)
         self._scheduler.enter(
             self._duration,

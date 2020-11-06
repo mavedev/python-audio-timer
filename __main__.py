@@ -10,6 +10,7 @@ from app.invariants import Constants
 
 
 def main() -> None:
+    """The main function of the app."""
     if len(sys.argv) != 2:
         print('Invalid argument amount, must be 1')
         return
