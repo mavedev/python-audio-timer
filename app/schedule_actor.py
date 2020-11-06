@@ -21,3 +21,4 @@ class ScheduleActor(metaclass=Singleton):
             self.run_task,
             (lambda: task(*args, **kwargs), )
         )
+        self._scheduler.run()
