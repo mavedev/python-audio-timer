@@ -5,7 +5,7 @@ import time
 
 from singletons import Singleton
 
-from .constants import Constants
+from .invariants import Constants
 
 
 class ScheduleActor(metaclass=Singleton):
