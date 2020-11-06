@@ -10,8 +10,8 @@ $ python3 . <seconds of delay between playing sound>
 # Build
 To build an executable:
 ```shell
-mkdir build && cd build
-pyinstaller --onefile --name='audiotimer' --paths='path/to/venv/Lib/site-packages' --add-data='../resources:resources' ../__main__.py
+$ mkdir build && cd build
+$ pyinstaller --onefile --name='audiotimer' --paths='path/to/venv/Lib/site-packages' --add-data='../resources:resources' ../__main__.py
 ```
 The --add-data delimiter is OS-dependent
 <br>Windows: ';'
